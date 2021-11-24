@@ -33,7 +33,7 @@ bool SCD4x::begin(uint8_t i2c_address, I2C_HandleTypeDef *i2c_handle,
 		 bool measBegin, bool autoCalibrate, bool skipStopPeriodicMeasurements)
 {
 	i2c_han = i2c_handle;
-	i2c_addr = i2c_address;
+	i2c_addr = i2c_address << 1;
 
   bool success = true;
 
